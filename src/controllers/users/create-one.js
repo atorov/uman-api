@@ -6,7 +6,7 @@ import xsUser from '../../xdata/xsettings/user.js'
 
 import generateAccessToken from '../../lib/generate-access-token.js'
 
-async function create(req, res, next) {
+async function createOne(req, res, next) {
     const { name, password, role } = req.body
 
     if (!name) {
@@ -78,4 +78,4 @@ async function create(req, res, next) {
     })
 }
 
-export default create
+export default createOne
