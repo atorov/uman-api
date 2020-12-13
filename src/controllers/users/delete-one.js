@@ -1,7 +1,7 @@
 import HTTPError from '../../lib/http-error.js'
 import User from '../../models/user.js'
 
-async function remove(req, res, next) {
+async function deleteOne(req, res, next) {
     const { uid } = req.params
 
     let user
@@ -26,9 +26,7 @@ async function remove(req, res, next) {
         return next(new HTTPError(msg, 500))
     }
 
-    // TODO: ?
-
     return res.status(204).send()
 }
 
-export default remove
+export default deleteOne

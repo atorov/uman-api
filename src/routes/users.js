@@ -1,10 +1,9 @@
-// TODO:
 import express from 'express'
 
 import createOne from '../controllers/users/create-one.js'
+import deleteOne from '../controllers/users/delete-one.js'
 import getAll from '../controllers/users/get-all.js'
 import getOne from '../controllers/users/get-one.js'
-// import remove from '../controllers/users/remove.js'
 import updateOne from '../controllers/users/update-one.js'
 import checkAdmin from '../middleware/check-admin.js'
 import checkAuth from '../middleware/check-auth.js'
@@ -28,6 +27,6 @@ router.use(checkAdmin)
 router.get('/', getAll)
 router.post('/', createOne)
 router.put('/:uid', updateOne)
-// router.delete('/:uid', remove)
+router.delete('/:uid', deleteOne)
 
 export default router
