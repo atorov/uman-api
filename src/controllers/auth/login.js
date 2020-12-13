@@ -18,7 +18,6 @@ async function login(req, res, next) {
         return next(new HTTPError(msg, 500))
     }
 
-    console.log(user)
     if (!user) {
         const msg = 'Could not authenticate this user!'
         return next(new HTTPError(msg, 403))
