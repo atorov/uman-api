@@ -1,6 +1,6 @@
 {
     "name": "uman-api",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "User management API",
     "main": "src/app.js",
     "scripts": {
